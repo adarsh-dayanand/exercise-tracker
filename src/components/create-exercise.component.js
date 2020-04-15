@@ -25,7 +25,7 @@ export default class CreateExercises extends Component {
     }
 
     componentDidMount(){
-       axios.get('http://localhost:3000/users/')
+       axios.get('https://adarsh-exercise-tracker.herokuapp.com/users/')
        .then(res => {
            if(res.data.length > 0){
                this.setState({
@@ -72,7 +72,7 @@ export default class CreateExercises extends Component {
 
         console.log(exercise);
 
-        axios.post('http://localhost:3000/exercises/add', exercise)
+        axios.post('https://adarsh-exercise-tracker.herokuapp.com/exercises/add', exercise)
         .then(res => console.log(res.data))
         .catch(err => console.log(err))
 

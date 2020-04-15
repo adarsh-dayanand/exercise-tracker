@@ -31,7 +31,7 @@ export default class ExercisesList extends Component {
 
     componentDidMount() {
 
-        axios.get('http://localhost:3000/exercises/')
+        axios.get('https://adarsh-exercise-tracker.herokuapp.com/exercises')
         .then((response) => {
             this.setState({exercises : response.data})
         })
@@ -39,7 +39,7 @@ export default class ExercisesList extends Component {
     }
 
     deleteExercise = (id) =>{
-        axios.delete('http://localhost:3000/exercises/'+id)
+        axios.delete('https://adarsh-exercise-tracker.herokuapp.com/exercises'+id)
         .then(res => console.log(res.data))
         //To remove the exercise from the UI.
         this.setState({
