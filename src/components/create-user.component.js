@@ -30,7 +30,7 @@ export default class CreateUsers extends Component {
 
         console.log(user);
 
-        axios.post('https://adarsh-exercise-tracker.herokuapp.com/users/add', user)
+        axios.post('http://localhost:3000/users/add', user)
         .then(res => console.log(res.data))
         .catch(err => console.log(err))
         
